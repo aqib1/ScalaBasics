@@ -2,10 +2,78 @@ package com.example.scala
 
 import java.util.Optional
 
+class Person {
+
+  private var name = ""
+
+  def getName= name
+
+
+  def setName(newName: String) {
+      name = newName;
+  }
+
+  override def toString: String = "This name is ".concat(name)
+
+}
+
+
+trait Point {
+  def mulPoints: Double
+}
+
+class Point2D(p1: Double, p2: Double) extends Point {
+  override def mulPoints: Double = p1 * p2
+}
+
+class Point3D(p1: Double, p2: Double, p3: Double) extends Point {
+  override def mulPoints: Double = p1 * p2 * p3
+}
+
+
 object Main {
   def main(args: Array[String]) {
 
-    var multi = Array(Array(2, 1, 1), Array(3, 2, 1))
+    var point2d = new Point2D(2.3, 33.1)
+    println(point2d.mulPoints)
+
+    var point3d = new Point3D(1.1, 2.45, 3.12)
+    println(point3d.mulPoints)
+
+
+//      var person = new Person
+//      person.setName("Aqib")
+//
+//    println(person)
+
+//    var g : Int => String = i => i + "" + 2;
+//
+//    println(g(2))
+//
+//    g = i => i + "ABC"
+
+//      println(hello("Aqib"))
+//    var arr1 = Array(1, 2, 3); var arr2 = Array("A", "B", "C")
+//
+//    var flatten = for(i <- arr1; j <- arr2) yield j + i
+//
+//    for(f <- flatten) {
+//      println(f)
+//    }
+
+//    var total = 0
+//
+//    for(i <- Range(0, 4)) {
+//      total += 1;
+//    }
+//
+//    println(total)
+
+//    var multi = Array(Array(2, 1, 1), Array(3, 2, 1))
+//
+//    for(i <- multi; j <- i) {
+//      println(j)
+//    }
 
 //      var arr = Array(2, 3, 1, 2)
 //      var total = 0;
@@ -35,9 +103,16 @@ object Main {
 //    for(i <- 1 to 10) {
 //      println(hello("" + i))
 //    }
+
+
+//    println(funImpl(5, i => String.valueOf(i)))
   }
 
-  def hello(name : String) : String = "Hello " + name
+
+  def funImpl(num : Int, fn : Int => String) = fn(num)
+
+
+  def hello(name : String = "A") : String = "Hello " + name
 
 
 
