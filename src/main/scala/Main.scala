@@ -1,7 +1,5 @@
 package com.example.scala
 
-import java.util.Optional
-
 class Person {
 
   private var name = ""
