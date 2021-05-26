@@ -34,11 +34,30 @@ class Point3D(p1: Double, p2: Double, p3: Double) extends Point {
 object Main {
   def main(args: Array[String]) {
 
-    var point2d = new Point2D(2.3, 33.1)
-    println(point2d.mulPoints)
+//    val number: Int = 23
+//    val longNumber: Long = 3999999999l
+//    val helloMessage: String = "Hi there"
+//    println(helloMessage)
+//
+//    val concatStr: String = helloMessage.concat(" Hi there")
+//    val concatWithPlus: String = helloMessage + " Hi there"
+//    val concatWithInterpolation = s"$concatWithPlus bye there"
+//    println(concatWithInterpolation)
+//
+//    val result: Int = if(number > 100) 500 else -9
+//    println(result)
+//    val codeBlock: String = {
+//      "Hi there"
+//    }
+//
+//    val shortCodeBlock: String = "Bye there"
 
-    var point3d = new Point3D(1.1, 2.45, 3.12)
-    println(point3d.mulPoints)
+
+//    var point2d = new Point2D(2.3, 33.1)
+//    println(point2d.mulPoints)
+//
+//    var point3d = new Point3D(1.1, 2.45, 3.12)
+//    println(point3d.mulPoints)
 
 
 //      var person = new Person
