@@ -1,9 +1,10 @@
 package com.example.scala
 
-import java.util.Arrays
+import java.util.{Arrays, UUID}
 
 object TwoSum extends App {
 
+  println(UUID.randomUUID().toString)
   println(Arrays.toString(twoSum(Array(3, 3), 6)))
 
   def twoSum(nums: Array[Int], target: Int): Array[Int] = {
