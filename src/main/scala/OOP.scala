@@ -1,6 +1,6 @@
 package com.example.scala
 
-
+import scala.language.postfixOps
 object OOP extends App {
 
   class test(val id: Integer,val name: String) {
@@ -18,11 +18,19 @@ object OOP extends App {
     }
     def add(name: String): String = this.name.concat(name)
 
+    def unary_+ : String = this.name.concat(this.name)
+    def isExists: Boolean = true
+
+    def apply(id: Int) : String = s"Id for $name is $id"
   }
 
-val t =  new test()
-  println(t.id)
-  println(t add "ABC")
+
+//val t =  new test()
+//  println(t.id)
+//  println(t add "ABC")
+//  println(+t)
+//  println(t isExists)
+//  println(t(1))
 
 // abstract class Animal {
 //   val food: String
