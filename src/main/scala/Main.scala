@@ -1,5 +1,5 @@
 package com.example.scala
-trait Carnivores {
+trait Carnivores extends Any {
   def test(): Unit = {
     println("testing")
   }
