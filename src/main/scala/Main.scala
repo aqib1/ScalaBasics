@@ -1,4 +1,7 @@
 package com.example.scala
+abstract class AnimalTest {
+   def test(): Unit
+}
 trait Carnivores extends Any {
   def test(): Unit = {
     println("testing")
@@ -7,12 +10,17 @@ trait Carnivores extends Any {
   def eatMeat(): String
 }
 object Main extends App {
+  val animal = new AnimalTest {
+    override def test(): Unit = println("Hi there")
+  }
+
+  animal.test()
 //  val teacher: Teacher = new Teacher("Ali")
 //  println(teacher.calculateAge(-10))
-  val loin = new Lion
-  loin eat "Goat"
-  println(loin.foodSpecial)
-  println(loin.eatMeat())
+//  val loin = new Lion
+//  loin eat "Goat"
+//  println(loin.foodSpecial)
+//  println(loin.eatMeat())
 }
 
 //class Person {
