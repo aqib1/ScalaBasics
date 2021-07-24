@@ -9,12 +9,34 @@ trait Carnivores extends Any {
 
   def eatMeat(): String
 }
-object Main extends App {
-  val animal = new AnimalTest {
-    override def test(): Unit = println("Hi there")
-  }
 
-  animal.test()
+
+case class TestClass(id: Int, name : String) {
+  def apply(id: Int, name: String): TestClass = TestClass(id, name)
+}
+case object UK {
+  def uk : String = "UnitedKingdom"
+}
+object Main extends App {
+  object enums {
+    enum Permissions {
+      case ADMIN, SUPERADMIN, USER, NONE
+    }
+  }
+  println(enums.Permissions.NONE)
+
+//  val test = TestClass(12, "aqib")
+//  val copyTest = test.copy()
+//  println(test == copyTest)
+//
+//  println(UK.uk)
+
+
+//  val animal = new AnimalTest {
+//    override def test(): Unit = println("Hi there")
+//  }
+//
+//  animal.test()
 //  val teacher: Teacher = new Teacher("Ali")
 //  println(teacher.calculateAge(-10))
 //  val loin = new Lion
