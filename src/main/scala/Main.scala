@@ -17,11 +17,32 @@ case class TestClass(id: Int, name : String) {
 case object UK {
   def uk : String = "UnitedKingdom"
 }
+
+class Calculator {
+  def add (n1:Int , n2:Int) : Int = n1.+(n2)
+}
+
 object Main extends App {
-  object Permissions extends Enumeration {
-    val USER, ADMIN , NONE = Value
-  }
-  println(Permissions.values)
+
+ val calculator: Calculator = new Calculator()
+
+  println(calculator.add(2, 3))
+
+// val number: Int = try {
+//   val throwException: Int = throw new NumberFormatException()
+//   throwException
+//  } catch {
+//    case numberFormatException : NumberFormatException => 5001
+//  }
+//
+//  println(number)
+
+
+
+//  object Permissions extends Enumeration {
+//    val USER, ADMIN , NONE = Value
+//  }
+//  println(Permissions.values)
 
 //  val test = TestClass(12, "aqib")
 //  val copyTest = test.copy()
