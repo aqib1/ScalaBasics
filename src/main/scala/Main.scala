@@ -18,12 +18,10 @@ case object UK {
   def uk : String = "UnitedKingdom"
 }
 object Main extends App {
-  object enums {
-    enum Permissions {
-      case ADMIN, SUPERADMIN, USER, NONE
-    }
+  object Permissions extends Enumeration {
+    val USER, ADMIN , NONE = Value
   }
-  println(enums.Permissions.NONE)
+  println(Permissions.values)
 
 //  val test = TestClass(12, "aqib")
 //  val copyTest = test.copy()
