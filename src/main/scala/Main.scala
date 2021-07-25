@@ -1,4 +1,7 @@
 package com.example.scala
+
+import scala.annotation.tailrec
+
 abstract class AnimalTest {
    def test(): Unit
 }
@@ -22,11 +25,22 @@ class Calculator {
   def add (n1:Int , n2:Int) : Int = n1.+(n2)
 }
 
+
+
 object Main extends App {
 
- val calculator: Calculator = new Calculator()
+  def testStackOverFlow(num : Int): Int = {
 
-  println(calculator.add(2, 3))
+    println("Testing")
+
+   1 + testStackOverFlow(num + 1)
+  }
+
+  // stackOverflow
+  // testStackOverFlow(1)
+// val calculator: Calculator = new Calculator()
+//
+//  println(calculator.add(2, 3))
 
 // val number: Int = try {
 //   val throwException: Int = throw new NumberFormatException()
