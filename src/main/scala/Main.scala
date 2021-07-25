@@ -31,6 +31,12 @@ object Main extends App {
 
   val doubler: Int => Int = x => x * 2
 
+  val doubler_v1: Int => Int = _ * 2
+
+  val trippler: (Int, Int) => Int = _ * _
+
+  println(trippler(2, 3))
+
   println(doubler(2))
 
   def testStackOverFlow(num : Int): Int = {
