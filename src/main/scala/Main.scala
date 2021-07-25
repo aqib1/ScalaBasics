@@ -29,6 +29,10 @@ class Calculator {
 
 object Main extends App {
 
+  val doubler: Int => Int = x => x * 2
+
+  println(doubler(2))
+
   def testStackOverFlow(num : Int): Int = {
 
     println("Testing")
