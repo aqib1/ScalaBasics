@@ -33,13 +33,13 @@ object Main extends App {
 
   val doubler_v1: Int => Int = _ * 2
 
-  val trippler: (Int, Int) => Int = _ * _
+  val triple: (Int, Int) => Int = _ * _
 
   val fourParams: (Int, Int, Int) => Int = _ / _ * _
 
   println(fourParams(1, 3, 4))
 
-  println(trippler(2, 3))
+  println(triple(2, 3))
 
   println(doubler(2))
 
