@@ -35,6 +35,10 @@ object Main extends App {
 
   val trippler: (Int, Int) => Int = _ * _
 
+  val fourParams: (Int, Int, Int) => Int = _ / _ * _
+
+  println(fourParams(1, 3, 4))
+
   println(trippler(2, 3))
 
   println(doubler(2))
